@@ -5,7 +5,10 @@ Tornade
 
 ## Description
 
-A PAAS using [Deis][] (with [Docker][] and [CoreOS][])
+A PAAS using :
+* [Deis][] (0.9.0)
+* [Docker][] (0.11)
+* [CoreOS][] (324.2.0)
 
 
 ## Installation
