@@ -10,10 +10,20 @@ A PAAS using [Deis][] (with [Docker][] and [CoreOS][])
 
 ## Installation
 
+* Add to `/etc/hosts` the Tornade host:
+```bash
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+fe80::1%lo0	localhost
+
+172.17.8.100    tornade.deisapp.com
+```
+
 * Setup local environment variables:
 
-        $ tornade.sh
-
+        $ tornade.sh build
+        $ tornade.sh init
 
 
 

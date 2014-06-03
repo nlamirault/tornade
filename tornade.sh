@@ -79,5 +79,24 @@ register_tornade() {
     echo "   $ deis create ...."
     echo "Then push it to Deis: "
     echo "   $ git push deis master"
-
 }
+
+
+usage() {
+    echo "$0 <command>"
+    echo "   build    : build the Deis"
+    echo "   init     : initialize Tornade PAAS"
+}
+
+case $1 in
+    "build")
+        download_deis
+        download_fleet
+        build_vagrant
+        make_deis
+        install_deis_client
+        ;;
+    *)
+        usage
+        ;;
+esac
